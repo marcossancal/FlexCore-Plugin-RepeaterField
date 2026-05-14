@@ -1,0 +1,28 @@
+{
+  "id":          "flexcore-repeater",
+  "name":        "Repeater Field",
+  "version":     "1.0.0",
+  "description": "Adiciona o tipo de campo Repetidor ao FlexCore. Permite N linhas com subcampos configuráveis, armazenadas em tabela própria para busca eficiente por índice.",
+  "author":      "Marcos Sanches",
+  "url":         "https://sancalproducoes.com.br",
+  "requires":    "1.0.0",
+  "namespace":   "FlexCoreRepeater",
+  "hooks": [
+    "field.types",
+    "field.options_build",
+    "field.render_config",
+    "field.render_form",
+    "field.render_value",
+    "record.input",
+    "record.values_loaded",
+    "record.created",
+    "record.updated",
+    "record.deleted",
+    "layout.head",
+    "layout.footer_scripts",
+    "records.list.columns.header",
+    "records.list.columns.cell",
+    "router.register"
+  ],
+  "settings": []
+}
