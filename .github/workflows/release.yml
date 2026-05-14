@@ -1,0 +1,16 @@
+name: Release Plugin
+on:
+  push:
+    tags: ['v*']
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Create plugin zip
+        run: zip -r plugin.zip . -x "*.git*" -x ".github/*" -x "*.md"
+      - name: Create Release
+        uses: softprops/action-gh-release@v1
+        with:
+          files: plugin.zip
